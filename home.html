@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<script>
+function myFunction() {
+    <ul>
+    </ul>
+}
+</script>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Signome - Sign Language Transcriber and Dictionary</title>
+    <link rel="icon" href="https://emojis.slackmojis.com/emojis/images/1476962060/1262/gnome.png?1476962060">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.js" 
+    integrity="sha512-a5hlZKgpC1LVAuKgVeXdP0D9Yfacj0hLtNdzx9zFMkIWRrQyO37KtIPiqArGmVuaBYu3ON6Vt0N3+G/JaLXQYQ==" 
+    crossorigin="anonymous"></script>
+    <style>
+        h1 {
+            font-size: 56px;
+            font-family: 'Average', serif;
+            font-weight:bolder;
+        }
+        h3 {
+            font-size: 20px;
+            font-family: 'Average', serif;
+            font-weight:normal;
+            color: dimgray;
+        }
+        h2 {
+            font-size: 24px;
+            font-family:'Average',serif;
+            font-weight:normal;
+            color: black;
+        }
+        body {
+            margin:0;
+            padding:0;
+        }
+        li {
+            font-family:Average,serif;
+            font-size:18;
+            color:grey;
+            margin-bottom: .8rem;
+        }
+        #titleWord1 {
+            position: absolute;
+            top: 10px;
+            left: 65px;
+        }
+        #titleWord2 {
+            position: absolute;
+            top: 10px;
+            left: 112px;
+        }
+        #titleWord3 {
+            position: absolute;
+            top: 10px;
+            left: 170px;
+        }
+        #subtitle {
+            position: absolute;
+            top: 49px;
+            left: 330px;
+        }
+        img.roundedcorners {
+            border-radius: 30px;
+        }
+        .recorder {
+            background-color: white;
+            border: none;
+            padding:20px;
+            text-align:center;
+            font-family: Average, serif;
+            font-size: 14px;
+            cursor:pointer;
+            border-radius:10px;
+        }
+        .aboutcontact {
+            background-color:#1759ca;
+            color: white;
+            border: none;
+            padding:14px;
+            text-align:center;
+            font-family: Average, serif;
+            font-size: 20px;
+            cursor:pointer;
+            border-radius:20px;
+            width: 185px;
+        }
+        #aboutPos {
+            position:absolute;
+            top:55px;
+            left:775px;
+        }
+        #ContactUs{
+            position:absolute;
+            top:55px;
+            left:995px;
+        }
+        #recordPos {
+            position:absolute;
+            top:360px;
+            left:640px;
+        }
+        #pasttrans {
+            position:absolute;
+            top:380px;
+            left:800px; 
+        }
+        #history {
+            position:absolute;
+            top:425px;
+            left:785px;
+        }
+    </style>
+</head>
+
+<body>
+    <script type='text/javascript' src="{{ url_for('static',filename='styles/homepage.js') }}"></script>
+    <h1 id='titleWord1' style='color:#cc1111;'>Si</h1>
+    <h1 id='titleWord2' style='color:#8111cc;'>gn</h1>
+    <h1 id='titleWord3' style='color:#1759ca;'>ome</h1>
+    <h3 id='subtitle'>Sign Language Transcriber and Dictionary</h3>
+    <img src="{{ url_for('video_feed') }}" style="position:absolute;top:142px;left:60px;border-radius:30px;">
+    <button class="recorder" id='recordPos' ><a href='/taking_image'>&#9654</a></button>
+    <h2 id='pasttrans'>History (Past Transcriptions)</h2>
+    <button class="aboutcontact" id='aboutPos' onclick='window.location.href="http://127.0.0.1:5000/about"'>About</button>
+    <button class="aboutcontact" id='ContactUs' onclick='window.location.href="http://127.0.0.1:5000/contactus"'>Contact Us</button>
+    <ol id="history" style="overflow-y:scroll;width:330px;height:120px;">
+        <li>hi</li>
+        <li>hello</li>
+    </ol>
+    <input type='text' style='overflow:hidden;background-color:#ebecf0;font-family:Average, serif;font-size:18px;color:grey;border:0px;
+    padding:18px;width:1090px;height:20px;border-radius:20px;position:absolute;top:665px;left:55px;outline:none;' placeholder='Search..'>
+</body>
+
+</html>
